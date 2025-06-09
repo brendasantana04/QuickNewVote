@@ -1,5 +1,7 @@
 package com.quickvote.demo;
 
+import com.quickvote.demo.DAO.EleitorDAO;
+import com.quickvote.demo.model.Eleitor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +10,15 @@ public class QuickvoteApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(QuickvoteApplication.class, args);
+
+		Eleitor e = new Eleitor();
+
+		e.setNumeroEleitor(13);
+		e.setNomeEleitor("Lula Molusco");
+		e.setNumeroSessao(1);
+
+		new EleitorDAO().cadastrarEleitor(e);
+
 	}
 
 }
