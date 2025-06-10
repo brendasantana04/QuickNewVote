@@ -16,19 +16,5 @@ public class EleitorDAO {
 
         PreparedStatement ps = null;
 
-        try {
-            ps = Objects.requireNonNull(conexao.getConexao()).prepareStatement(sql);
-            ps.setInt(1, Eleitor.getNumeroEleitor());
-            ps.setString(2, Eleitor.getNomeEleitor());
-            ps.setInt(3, Eleitor.getNumeroSessao());
-
-            ps.execute();
-            ps.close();
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
     }
-
 }

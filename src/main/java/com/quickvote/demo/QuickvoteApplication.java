@@ -13,10 +13,6 @@ public class QuickvoteApplication {
 
 		Eleitor e = new Eleitor();
 
-		e.setNumeroEleitor(13);
-		e.setNomeEleitor("Lula Molusco");
-		e.setNumeroSessao(1);
-
 		new EleitorDAO().cadastrarEleitor(e);
 
 	}
