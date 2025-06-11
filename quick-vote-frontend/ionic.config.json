@@ -1,0 +1,7 @@
+{
+  "name": "quick-vote-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
